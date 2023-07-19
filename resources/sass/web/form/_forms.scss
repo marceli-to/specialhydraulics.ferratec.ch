@@ -1,0 +1,47 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: form/forms
+ * -----------------------------------------------------------------------------
+ */
+
+// Contact forms
+form.contact {
+  @extend %grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: $space-lg;
+  @include bp-md() {
+    grid-column-gap: $space-xl;
+  } 
+}
+
+
+// Login form
+form.auth {
+  max-width: 480px;
+}
+
+// Recover password
+form.auth--recover {
+  max-width: 480px;
+
+  .form-group {
+    label {
+      @include bp-xl() {
+        flex: 0 0 125px;
+      }
+    }
+  }
+}
+
+// Reset password form
+form.auth--reset {
+  max-width: 480px;
+
+  .form-group {
+    label {
+      @include bp-xl() {
+        flex: 0 0 215px;
+      }
+    }
+  }
+}

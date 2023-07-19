@@ -1,0 +1,15 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/hr
+ * -----------------------------------------------------------------------------
+ */
+
+%hr,
+.hr,
+hr {
+  background-color: $color-secondary;
+  border: none;
+  height: 1px;
+  line-height: 1;
+  margin-bottom: $space-md;
+}

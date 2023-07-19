@@ -1,0 +1,39 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: component/headings/h1
+ * -----------------------------------------------------------------------------
+ */
+
+h1 {
+  color: $color-primary;
+  @include font-light();
+  @include font-size($fs-lg);
+  text-transform: uppercase;
+  padding-bottom: $space-lg;
+  position: relative;
+
+  em {
+    @include font-bold();
+  }
+
+  span {
+    display: block;
+    @include font-size($fs-sm);
+    @include font-regular();
+    margin-top: $space-xs;
+    max-width: 480px;
+    text-transform: none;
+  }
+
+  &:after {
+    background-color: $color-primary;
+    content: '';
+    display: block;
+    height: 1px;
+    left: 0;
+    line-height: 1;
+    position: absolute;
+    bottom: 0;
+    width: 70px;
+  }
+}

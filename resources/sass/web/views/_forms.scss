@@ -1,0 +1,50 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: views/products
+ * -----------------------------------------------------------------------------
+ */
+
+.form {
+  margin-top: $space-xl;
+
+  h2 {
+    @include font-size($fs-md);
+    @include font-light();
+    margin-bottom: $space-sm;
+  }
+
+  h3 {
+    margin-bottom: $space-sm;
+  }
+
+  &.form--product-rent {
+
+    .products {
+      margin-top: $space-md;
+      max-width: 700px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: $space-md;
+      @include bp-sm() {
+  
+      }
+    
+      @include bp-md() {
+        grid-column-gap: $space-xl;
+      }
+    }
+
+    form {
+      max-width: 700px;
+
+      .select-wrapper {
+        border: none;
+        border-bottom: 1px solid $color-light-grey;
+        select {
+          color: $color-dark;
+          padding: 12px 0 10px 0;
+        }
+      }
+    }
+  }
+}

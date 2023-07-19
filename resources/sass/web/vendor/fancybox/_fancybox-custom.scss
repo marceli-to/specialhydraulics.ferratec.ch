@@ -1,0 +1,72 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: vendor/fancybox/fancybox-custom
+ * -----------------------------------------------------------------------------
+ *
+ */
+
+.fancybox-is-open .fancybox-bg {
+  background-color: $color-white;
+  opacity: 1 !important;
+}
+
+.fancybox-toolbar {
+  height: 40px;
+  width: 100%;
+  z-index: 999999;
+}
+
+.btn-fancybox-close {
+  @include background-default();
+  background-image: url($url-icons + 'cross.svg');
+  background-size: cover;
+  height: 25px;
+  right: 15px;
+  position: absolute;
+  top: 15px;
+  width: 25px;
+  z-index: 1;
+
+  @include bp-md() {
+    height: 40px;
+    right: 30px;
+    top: 30px;
+    width: 40px;
+  }
+}
+
+.btn-fancybox-prev,
+.btn-fancybox-next {
+  display: block;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 50%;
+  z-index: 99998;
+}
+
+.btn-fancybox-next {
+  @include background-default();
+  background-image: url($url-icons + 'arrow-right.svg');
+  background-size: 25px auto;
+  background-position: center right;
+  right: 10px;
+
+  @include bp-md() {
+    background-size: 40px auto;
+    right: 30px;
+  }
+}
+
+.btn-fancybox-prev {
+  @include background-default();
+  background-image: url($url-icons + 'arrow-left.svg');
+  background-size: 25px auto;
+  background-position: center left;
+  left: 10px;
+
+  @include bp-md() {
+    background-size: 40px auto;
+    left: 30px;
+  }
+}

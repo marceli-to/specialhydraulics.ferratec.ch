@@ -1,0 +1,25 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: layout/footer
+ * -----------------------------------------------------------------------------
+ */
+
+footer.site-footer {
+  background-color: $color-light-grey;
+  color: $color-dark;
+  @include font-light();
+  
+  > div {
+    @extend %inner-block;
+    @include font-size($fs-xxs);
+    padding-bottom: $space-md;
+    padding-top: $space-md;
+    a {
+      color: $color-secondary;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: layout/grid
+ * -----------------------------------------------------------------------------
+ *
+ */
+
+%grid,
+.grid {
+
+  @include bp-sm() {
+    display: grid;
+  }
+}
+
+%grid-2x1,
+.grid-2x1 {
+  @extend %grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: $space-sm;
+
+  @include bp-md() {
+    grid-column-gap: $space-md;
+  }  
+}
+
+.grid-3x1 {
+  @extend %grid;
+  grid-template-columns: 3fr 1fr;
+  grid-column-gap: $space-md;
+
+  @include bp-md() {
+    grid-column-gap: $space-xl;
+  }
+}

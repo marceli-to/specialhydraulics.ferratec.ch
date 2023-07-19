@@ -1,0 +1,37 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/buttons/menu
+ * -----------------------------------------------------------------------------
+ */
+
+.btn-menu {
+  display: block;
+  height: 24px;
+  width: 24px;
+  
+  svg {
+    display: block;
+    height: auto;
+    width: 100%;
+
+    &.burger {
+      display: block;
+    }
+
+    &.cross {
+      display: none;
+    }
+  }
+
+  &.is-active {
+    svg {
+      &.burger {
+        display: none;
+      }
+      &.cross {
+        display: block;
+      }
+    }
+  }
+}
+

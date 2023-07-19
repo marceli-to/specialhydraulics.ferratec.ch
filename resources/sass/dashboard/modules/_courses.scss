@@ -1,0 +1,84 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: modules/courses
+ * -----------------------------------------------------------------------------
+ */
+
+.widget-course-register {
+  @include responsive-prop('margin-bottom', $space-md);
+  @include responsive-prop('margin-top', $space-md);
+
+  .no-records {
+    color: $color-danger;
+    @include responsive-prop('margin-top', $space-sm);
+  }
+}
+
+.course-register {
+  background-color: $color-light;
+  border-radius: 4px;
+  @include responsive-prop('margin-top', $space-md);
+  @include responsive-prop('padding-bottom', $space-sm);
+  @include responsive-prop('padding-top', $space-sm);
+  @include responsive-prop('padding-left', $space-sm);
+  @include responsive-prop('padding-right', $space-sm);
+  position: relative;
+
+  h2 {
+    @include font-size($fs-md);
+    @include font-regular();
+    color: $color-black;
+  }
+
+  &__intro {
+    @include responsive-prop('margin-bottom', $space-sm);
+  }
+
+  &__select {
+    display: block;
+    position: relative;
+    width: 100%;
+
+    &:nth-child(n+2) {
+      @include responsive-prop('margin-top', $space-sm);
+    }
+
+    .select-wrapper select {
+      border-color: $color-grey;
+    }
+
+    .btn-primary {
+      color: $color-white;
+    }
+  }
+
+  &__items {
+
+    > div {
+      background-color: transparent;
+      border: 2px solid $color-grey;
+      border-radius: 2px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      @include responsive-prop('margin-bottom', $space-xs);
+      padding: 10px;
+
+      &:hover {
+        background-color: $color-white;
+      }
+
+      > div {
+       
+        &:last-child {
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+      
+      label {
+        @include font-size($fs-xs);
+        margin-bottom: 0;
+      }
+    }
+  }
+}

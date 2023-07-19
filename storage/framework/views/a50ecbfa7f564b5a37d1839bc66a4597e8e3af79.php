@@ -1,0 +1,2 @@
+<input type="submit" name="<?php echo e($name); ?>" value="<?php echo e($label); ?>">
+<?php /**PATH /Users/marceli.to/Jamon.digital/Webroot/specialhydraulics.ferratec.ch/resources/views/web/components/form/button-submit.blade.php ENDPATH**/ ?>

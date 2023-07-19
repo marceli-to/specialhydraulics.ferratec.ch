@@ -1,0 +1,34 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/logo
+ * -----------------------------------------------------------------------------
+ */
+
+.logo {
+  display: block;
+
+  svg {
+    display: block;
+    height: auto;
+    max-width: 115px;
+    width: 100%;
+
+    @include bp-md() {
+      max-width: 175px;
+    }
+  }
+}
+
+.logo-intercable {
+  display: block;
+  height: 20px;
+  margin-left: 25px;
+  margin-bottom: 3px;
+  width: 138px;
+
+  @include bp-md() {
+    height: auto;
+    margin-left: 40px;
+    width: 165px;
+  }
+}

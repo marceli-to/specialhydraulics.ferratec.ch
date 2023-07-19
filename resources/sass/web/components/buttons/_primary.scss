@@ -1,0 +1,31 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/buttons/primary
+ * -----------------------------------------------------------------------------
+ */
+
+%btn-primary,
+.btn-primary {
+  @extend %btn;
+  background-color: $color-primary;
+  border-radius: 2px;
+  color: $color-white;
+  display: inline-flex;
+  @include font-regular();
+  @include font-size($fs-md);
+  padding: 8px 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color .1s ease-in-out;
+  width: auto;
+
+  &:hover {
+    background-color: $color-secondary;
+  }
+
+  &.is-sm {
+    @include font-size($fs-sm);
+    padding: 4px 6px;
+    text-transform: none;
+  }
+}

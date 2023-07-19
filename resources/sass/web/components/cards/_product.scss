@@ -1,0 +1,119 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/cards/product
+ * -----------------------------------------------------------------------------
+ *
+ */
+
+.product-card {
+  background-color: $color-white;
+  border: 2px solid #f9f9f9;
+  padding: $space-sm;
+  margin-bottom: $space-md;
+  transition: box-shadow .12s ease-in;
+
+  @include bp-md() {
+    margin-bottom: $space-xl;
+    padding: $space-md;
+  }
+
+  h2 {
+    color: $color-primary;
+    @include font-light();
+    @include font-size($fs-md);
+    margin-bottom: $space-md;
+    em {
+      @include font-bold();
+      text-transform: uppercase;
+    }
+  }
+
+  img {
+    @extend %is-responsive;
+  }
+
+  a:not(.btn) {
+    @include font-size($fs-xxs);
+  }
+
+
+  &.is-portrait {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: $space-md;
+  }
+
+  &.is-landscape {
+
+    figure {
+      margin-bottom: $space-md;
+    }
+
+    img {
+      max-width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &.product-card--home {
+
+    h2 {
+      @include font-bold();
+    }
+
+    &.is-portrait {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      grid-column-gap: $space-md;
+
+      @include bp-md() {
+        grid-template-columns: 1fr 3fr;
+      }
+    }
+  }
+
+  &.product-card--consumable,
+  &.product-card--accessory,
+  &.product-card--tool {
+    
+    @include bp-md() {
+      margin-bottom: 0;
+      padding: $space-sm;
+    }
+
+    h3 {
+      @include font-light();
+      em {
+        @include font-bold();
+      }
+    }
+  }
+
+  &.product-card--consumable,
+  &.product-card--accessory {
+    &.is-landscape {
+      figure {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+
+
+  &:hover {
+    border: 2px solid transparent;
+    box-shadow: 1px 1px 12px 0 rgba(153, 153, 153, .25);
+    &.is-selected {
+      box-shadow: none
+    }
+  }
+  
+  &.is-selected {
+    border: 2px solid $color-primary;
+  }
+
+  
+  .btn-primary {
+    margin-top: $space-md;
+  }
+}

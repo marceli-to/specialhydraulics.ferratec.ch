@@ -1,0 +1,39 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: layout/header
+ * -----------------------------------------------------------------------------
+ */
+
+header.site-header {
+  background-color: $color-white;
+  box-shadow: 0 0 4px 0 rgba(153, 153, 153, .25);
+  height: $header-height-sm;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 101;
+
+  > div {
+    @extend %inner-block;
+    align-items: center;
+    display: flex;
+    height: inherit;
+    justify-content: space-between;
+  }
+
+  @include bp-md() {
+    height: $header-height-md;
+  }
+
+  .logos {
+    align-items: flex-end;
+    display: flex;
+  }
+}
+
+header.product-header {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+}

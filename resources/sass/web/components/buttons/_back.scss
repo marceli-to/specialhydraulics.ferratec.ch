@@ -1,0 +1,39 @@
+
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/buttons/store
+ * -----------------------------------------------------------------------------
+ */
+
+.btn-back {
+  align-items: center;
+  color: $color-primary;
+  display: none;
+  @include font-regular();
+  @include font-size($fs-sm);
+  justify-content: flex-start;
+  text-decoration: none;
+  width: auto;
+
+  @include bp-sm() {
+    display: flex;
+  }
+
+  svg {
+    flex: 0 0 18px
+  }
+
+  > span {
+    display: block;
+    padding-left: $space-xxs;
+  }
+
+  &:hover {
+    color: $color-primary;
+
+    svg {
+      stroke: $color-primary;
+    }
+  }
+
+}

@@ -1,0 +1,20 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: layout/main
+ * -----------------------------------------------------------------------------
+ */
+
+main.site {
+  flex: 1;
+  padding-bottom: $space-lg;
+  padding-top: $header-height-sm;
+  z-index: 1;
+
+  @include bp-md() {
+    padding-top: $header-height-md;
+  }
+
+  p {
+    max-width: 760px;
+  }
+}

@@ -1,0 +1,90 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: layout/section
+ * -----------------------------------------------------------------------------
+ */
+
+section {
+  > div {
+    @extend %inner-block;
+    padding-top: $space-md;
+
+    @include bp-md() {
+      padding-top: $space-xl;
+    }
+  }
+
+  a {
+    color: $color-secondary;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  ul {
+    margin: 0 0 $space-md 0;
+    padding: 0 0 0 24px;
+
+    @include bp-md() {
+      margin-bottom: $space-lg;
+      &:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+    
+
+  }
+
+  li {
+    display: list-item;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+section.cta {
+  background-color: $color-primary;
+  min-height: 200px;
+  padding-bottom: $space-md;
+
+  @include bp-md() {
+    padding-bottom: $space-xl;
+  }
+
+  > div {
+    @include bp-md() {
+      padding-top: $space-lg;
+    }
+  }
+
+  h2 {
+    color: $color-white;
+    @include font-size($fs-lg);
+    @include font-light();
+    margin-bottom: $space-lg;
+  }
+}
+
+.cta__buttons {
+
+  > * {
+    margin-bottom: $space-md;
+    @include bp-md() {
+      margin-bottom: 0;
+    }
+  }
+
+  @include bp-sm() {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: $space-md;
+  }
+
+  @include bp-md() {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: $space-md;
+  }
+
+}

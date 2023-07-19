@@ -1,0 +1,81 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: layout/menu/site
+ * -----------------------------------------------------------------------------
+ */
+
+nav.site-menu {
+  background-color: $color-white;
+  height: calc(100% - #{$header-height-sm});
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: calc(#{$header-height-sm} + 4px);
+  width: 100%;
+  z-index: -1;
+
+  @include bp-md() {
+    height: calc(100% - #{$header-height-md});
+    top: calc(#{$header-height-md} + 4px);
+  }
+
+  &.is-visible {
+    opacity: 1;
+    pointer-events: all;
+    z-index: 301;
+  }
+
+  > div {
+    @extend %inner-block;
+  }
+
+  ul {
+    width: 100%;
+    @include bp-md() {
+      padding-top: $space-lg;
+    }
+  }
+
+  li {
+    display: block;
+
+    &.site-menu__language {
+      display: flex;
+      margin-top: $space-md;
+      
+      @include bp-md() {
+        margin-top: $space-lg;
+      }
+
+      a {
+        border-bottom: none !important;
+        margin-right: $space-md;
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  a {
+    background-color: transparent;
+    border-bottom: 1px solid $color-light-grey;
+    color: $color-primary;
+    @include font-regular();
+    @include font-size($fs-lg);
+    text-transform: uppercase;
+    display: block;
+    padding: $space-sm 0;
+    transition: color .1s ease-in;
+
+    &:hover {
+      color: $color-dark;
+    }
+
+    @include bp-md() {
+      border-bottom: none;
+      padding: $space-sm 0;
+    }
+  }
+}

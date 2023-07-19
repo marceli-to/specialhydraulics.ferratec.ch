@@ -1,0 +1,21 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: layout/menu/footer
+ * -----------------------------------------------------------------------------
+ */
+
+nav.footer-menu {
+  
+  li {
+    display: inline-block;
+    margin-right: $space-sm;
+  }
+  
+  a {
+    color: $color-secondary;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
