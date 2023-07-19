@@ -1,5 +1,5 @@
 
-<tr>
+{{-- <tr>
   <td class="header">
     <div>
       <a href="{{ $url }}">
@@ -7,4 +7,4 @@
       </a>
     </div>
   </td>
-</tr>
+</tr> --}}
