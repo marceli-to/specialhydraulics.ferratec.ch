@@ -21,5 +21,19 @@ footer.site-footer {
         text-decoration: none;
       }
     }
+    .copy {
+ 
+
+      nav {
+        margin-top: $space-sm;
+        ul {
+          display: flex;
+          gap: $space-sm;
+        }
+        li {
+          display: block;
+        }
+      }
+    }
   }
 }

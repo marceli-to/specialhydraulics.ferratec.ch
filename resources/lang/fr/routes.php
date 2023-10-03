@@ -15,5 +15,7 @@ return [
   'contact-training-submit' => 'contacter/formation/envoyer',
   'contact-presentation' => 'kontakt/presentation/{slug?}/{product?}',
   'contact-presentation-submit' => 'kontakt/presentation/envoyer',
-  'thank-you' => 'contacter/merci'
+  'thank-you' => 'contacter/merci',
+  'privacy-policy' => 'declaration-de-protection-des-donnees',
+  'cookies' => 'cookies',
 ];

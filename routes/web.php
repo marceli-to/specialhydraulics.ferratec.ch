@@ -36,6 +36,10 @@ Route::multilingual('consumable', 'ConsumableController@show')->name('page.consu
 // Tools
 Route::multilingual('tool', 'ToolController@show')->name('page.tool.show');
 
+// Privacy
+Route::multilingual('privacy-policy', 'PageController@privacy')->name('page.privacy');
+Route::multilingual('cookies', 'PageController@cookies')->name('page.cookies');
+
 // Form - Callback
 Route::multilingual('contact-callback', 'FormController@callback')->name('page.forms.callback');
 Route::multilingual('contact-callback-submit', 'FormController@callbackSubmit')->name('page.forms.callback.submit')->method('post');

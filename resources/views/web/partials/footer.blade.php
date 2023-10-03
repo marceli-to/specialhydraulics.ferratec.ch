@@ -62,6 +62,18 @@
   <div>
     <p>Copyright © {{date('Y', time())}} {{\Config::get('custom.company')}}<br>{!!__('page.copyright')!!}</p>
     <p><strong>FERRATEC TECHNICS AG</strong><br>Grossmattstrasse 19<br>8964 Rudolfstetten<br>Telefon +41 56 649 21 21<br>Fax +41 56 649 21 41<br><a href="mailto:info@ferratec.ch">info@ferratec.ch</a></p>
+    <div class="copy">
+      <nav>
+        <ul>
+          <li>
+            <a href="{{ localized_route('page.privacy') }}">{{__('Datenschutzerklärung')}}</a>
+          </li>
+          <li>
+            <a href="{{ localized_route('page.cookies') }}">{{__('Cookies')}}</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </footer>
 <script src="{{ mix('assets/js/app.js') }}" type="text/javascript"></script>

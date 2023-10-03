@@ -39,4 +39,26 @@ class PageController extends BaseController
     $categories = $this->productCategory->with('products')->orderBy('order')->where('parent_id', '=', NULL)->get();
     return view($this->viewPath . 'home', ['categories' => $categories]);
   }
+
+  /**
+   * Page: 'Privacy'
+   * 
+   * @return \Illuminate\Http\Response
+   */
+  
+   public function privacy()
+   {
+     return view($this->viewPath . 'privacy.privacy');
+   }
+ 
+   /**
+    * Page: 'Cookies'
+    *
+    * @return \Illuminate\Http\Response
+    */
+ 
+   public function cookies()
+   {
+     return view($this->viewPath . 'privacy.cookies');
+   }
 }
