@@ -32,7 +32,7 @@
   </li>
 </ol>
 <p>Einige Cookies können mehr als einen dieser Zwecke erfüllen.</p>
-<p><strong>"Streng notwendige"</strong>Cookies ermöglichen es Ihnen, sich auf der Website zu bewegen und wichtige Funktionen wie sichere Bereiche zu nutzen. Ohne diese Cookies können wir die gewünschten Dienste nicht anbieten.</p>
+<p><strong>"Streng notwendige"</strong> Cookies ermöglichen es Ihnen, sich auf der Website zu bewegen und wichtige Funktionen wie sichere Bereiche zu nutzen. Ohne diese Cookies können wir die gewünschten Dienste nicht anbieten.</p>
 <p>Wir verwenden diese "Strictly Necessary"-Cookies, um:</p>
 <ul>
   <li>
