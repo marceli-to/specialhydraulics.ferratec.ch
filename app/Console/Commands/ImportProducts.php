@@ -48,9 +48,9 @@ class ImportProducts extends Command
         $product = Product::find($data[0]);
         if ($product)
         {
-          $product->setTranslation('link_shop_ferratec', 'de', $data[1]);
-          $product->setTranslation('link_shop_ferratec', 'fr', $data[2]);
-          $product->setTranslation('link_shop_ferratec', 'it', $data[1]);
+          $product->setTranslation('link_shop_ferratec', 'de', $data[1] ? $data[1] : 'null');
+          $product->setTranslation('link_shop_ferratec', 'fr', $data[2] ? $data[2] : 'null');
+          $product->setTranslation('link_shop_ferratec', 'it', $data[1] ? $data[1] : 'null');
           $product->save();
         }
 
