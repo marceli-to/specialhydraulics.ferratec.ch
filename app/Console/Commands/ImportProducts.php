@@ -42,13 +42,18 @@ class ImportProducts extends Command
     $handle = fopen($file, 'r');
     if (($handle = fopen($file, 'r')) !== false)
     {
-      while (($data = fgetcsv($handle)) !== false)
+      while (($line = fgetcsv($handle)) !== false)
       {
-        $accessory = Product::find($data[0]);
-        $accessory->setTranslation('link_shop_ferratec', 'de', $data[1]);
-        $accessory->setTranslation('link_shop_ferratec', 'fr', $data[2]);
-        $accessory->setTranslation('link_shop_ferratec', 'it', $data[1]);
-        $accessory->save();
+        $data = explode(';', $line[0]);
+        $product = Product::find($data[0]);
+        if ($product)
+        {
+          $product->setTranslation('link_shop_ferratec', 'de', $data[1]);
+          $product->setTranslation('link_shop_ferratec', 'fr', $data[2]);
+          $product->setTranslation('link_shop_ferratec', 'it', $data[1]);
+          $product->save();
+        }
+
       }
       fclose($handle);
     }

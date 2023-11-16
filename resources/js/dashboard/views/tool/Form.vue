@@ -305,7 +305,7 @@ export default {
       this.isLoading = true;
       this.axios.post('/api/tool', this.tool).then(response => {
         this.$router.push({ name: "tools" });
-        this.$notify({ type: "success", text: "Illustration erfasst!" });
+        this.$notify({ type: "success", text: "Daten erfasst!" });
         this.isLoading = false;
       });
     },

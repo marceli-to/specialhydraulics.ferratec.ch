@@ -335,7 +335,7 @@ export default {
       this.isLoading = true;
       this.axios.post('/api/consumable', this.consumable).then(response => {
         this.$router.push({ name: "consumables" });
-        this.$notify({ type: "success", text: "Illustration erfasst!" });
+        this.$notify({ type: "success", text: "Daten erfasst!" });
         this.isLoading = false;
       });
     },

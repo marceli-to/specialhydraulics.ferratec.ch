@@ -368,7 +368,7 @@ export default {
       this.isLoading = true;
       this.axios.post('/api/product', this.product).then(response => {
         this.$router.push({ name: "products" });
-        this.$notify({ type: "success", text: "Illustration erfasst!" });
+        this.$notify({ type: "success", text: "Daten erfasst!" });
         this.isLoading = false;
       });
     },
