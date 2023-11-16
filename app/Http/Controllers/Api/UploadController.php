@@ -36,8 +36,20 @@ class UploadController extends Controller
     $file = $request->file('file');
     $name = $this->sanitize(trim($file->getClientOriginalName()));
     $name = $this->prefix . uniqid()  . '_' . $name;
+
     $file->move($this->upload_path, $name);
     $filetype = \File::extension($this->upload_path . $name);
+
+    // Sync uploads to another application (hydraulic-tools.ch) using the same database and files
+    if(env('SYNC_UPLOAD_PATH_1') !== null)
+    {
+      File::copy($this->upload_path . '/' . $name, env('SYNC_UPLOAD_PATH_1') . $name);
+    }
+
+    if(env('SYNC_UPLOAD_PATH_2') !== null)
+    {
+      File::copy($this->upload_path . '/' . $name, env('SYNC_UPLOAD_PATH_2') . $name);
+    }
 
     $image_types = ['jpg', 'jpeg', 'png'];
     $orientation = '';
