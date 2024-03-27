@@ -41,16 +41,16 @@ Route::multilingual('privacy-policy', 'PageController@privacy')->name('page.priv
 Route::multilingual('cookies', 'PageController@cookies')->name('page.cookies');
 
 // Form - Callback
-Route::multilingual('contact-callback', 'FormController@callback')->name('page.forms.callback');
-Route::multilingual('contact-callback-submit', 'FormController@callbackSubmit')->name('page.forms.callback.submit')->method('post');
+// Route::multilingual('contact-callback', 'FormController@callback')->name('page.forms.callback');
+// Route::multilingual('contact-callback-submit', 'FormController@callbackSubmit')->name('page.forms.callback.submit')->method('post');
 
 // Form - Training
 Route::multilingual('contact-training', 'FormController@training')->name('page.forms.training');
 Route::multilingual('contact-training-submit', 'FormController@trainingSubmit')->name('page.forms.training.submit')->method('post');
 
 // Form - Presentation
-Route::multilingual('contact-presentation', 'FormController@presentation')->name('page.forms.presentation');
-Route::multilingual('contact-presentation-submit', 'FormController@presentationSubmit')->name('page.forms.presentation.submit')->method('post');
+// Route::multilingual('contact-presentation', 'FormController@presentation')->name('page.forms.presentation');
+// Route::multilingual('contact-presentation-submit', 'FormController@presentationSubmit')->name('page.forms.presentation.submit')->method('post');
 
 // Form - Rent
 Route::multilingual('product-rent', 'FormController@rent')->name('page.forms.rent');
@@ -61,33 +61,6 @@ Route::multilingual('thank-you', 'FormController@thankYou')->name('page.forms.th
 
 // Url based images
 Route::get('/img/{template}/{filename}', 'ImageController@getResponse');
-
-Route::get('/training-user', function () {
-  return new App\Mail\TrainingUser(
-    [
-      'firstname' => 'Marcel',
-      'name' => 'Stadelmann',
-      'company' => 'marceli.to',
-      'phone' => '078 749 74 09',
-      'email' => 'marcel.stadelmann@gmail.com',
-      'date' => '19.05.2021',
-    ]
-  );
-});
-
-Route::get('/training-owner', function () {
-  return new App\Mail\TrainingOwner(
-    [
-      'firstname' => 'Marcel',
-      'name' => 'Stadelmann',
-      'company' => 'marceli.to',
-      'phone' => '078 749 74 09',
-      'email' => 'marcel.stadelmann@gmail.com',
-      'date' => '19.05.2021',
-      'headcount' => '15',
-    ]
-  );
-});
 
 /*
 |--------------------------------------------------------------------------

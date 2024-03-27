@@ -18,6 +18,7 @@
         <p>{{__('page.text-form-training-individual-trainings')}}</p>
         <form method="POST" action="{{ localized_route('page.forms.training.submit') }}" class="contact">
           @csrf
+          <x-honeypot />
           <div>
             <h2>{{__('page.label-form-personal-details')}}</h2>
             <x-text-field label="{{__('page.form-label-name')}} *" type="text" name="name" />

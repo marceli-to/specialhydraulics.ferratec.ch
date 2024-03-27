@@ -14,6 +14,7 @@
 
         <form method="POST" action="{{ localized_route('page.forms.rent.submit') }}" class="product-rent js-rent-form">
           @csrf
+          <x-honeypot />
           <div>
             <h2 class="sb-xxl">{{__('page.heading-form-rent-select-product')}}</h2>
             <div class="error-message js-error-productId" style="display:none">

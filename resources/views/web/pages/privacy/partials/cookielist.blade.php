@@ -17,18 +17,6 @@
     <td>Session</td>
     <td>Functionality</td>
   </tr>
-  <tr>
-    <td>intercom-device-id-*</td>
-    <td>stores a unique device ID</td>
-    <td>Session</td>
-    <td>Functionality</td>
-  </tr>
-  <tr>
-    <td>intercom-session-*</td>
-    <td>stores a unique user ID</td>
-    <td>Session</td>
-    <td>Functionality</td>
-  </tr>
     <tr>
     <td>XSRF-TOKEN</td>
     <td>stores a client-side cross-site-scripting token (prevents XSS attacks)</td>
