@@ -43,18 +43,6 @@
             @endif
           </div>
         </div>
-        @if ($product->link_shop_ferratec)
-          <div class="product__shop">
-            <hr>
-            <h3>{{__('page.heading-order-product')}}</h3>
-            <div class="product__shop-buttons">
-              <a href="{{$product->link_shop_ferratec}}" target="_blank" class="btn-primary">
-                {{__('page.button-store')}}
-              </a>
-            </div>
-          </div>
-        @endif
-
         @if (isset($api_connection['hookurl']))
           <div class="product__shop">
             <hr>
@@ -69,6 +57,18 @@
               </form>
             </div>
           </div>
+        @else
+          @if ($product->link_shop_ferratec)
+            <div class="product__shop">
+              <hr>
+              <h3>{{__('page.heading-order-product')}}</h3>
+              <div class="product__shop-buttons">
+                <a href="{{$product->link_shop_ferratec}}" target="_blank" class="btn-primary">
+                  {{__('page.button-store')}}
+                </a>
+              </div>
+            </div>
+          @endif
         @endif
 
         @if ($product->publishedImages->count() > 0)

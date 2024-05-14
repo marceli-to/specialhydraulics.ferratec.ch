@@ -15,3 +15,4 @@ INSTALL.txt
 /storage/app/public
 /storage/app/logs/laravel.log
 /storage/app/framework
+/storage/app/framework/cache
