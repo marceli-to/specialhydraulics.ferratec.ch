@@ -34,6 +34,7 @@ return [
   'label-choose-product' => 'Seleziona il prodotto',
   'button-send' => 'Invia',
   'button-store' => 'Visualizza nello shop',
+  'button-basket' => 'Aggiungi al carrello',
   'label-please-choose' => 'Seleziona...',
   'form-label-name' => 'Cognome',
   'form-label-firstname' => 'Nome',
