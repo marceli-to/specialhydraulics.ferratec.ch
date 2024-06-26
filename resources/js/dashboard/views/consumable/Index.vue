@@ -127,7 +127,7 @@ export default {
 
     getCategory(id) {
       const index = this.consumable_categories.findIndex(x => x.id === id);
-      return this.consumable_categories[index].title.de;
+      return index > -1 ? this.consumable_categories[index].title.de : null
     }
   }
 }

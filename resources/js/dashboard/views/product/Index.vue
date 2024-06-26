@@ -135,7 +135,7 @@ export default {
 
     getCategory(id) {
       const index = this.product_categories.findIndex(x => x.id === id);
-      return this.product_categories[index].title.de;
+      return index > -1 ? this.product_categories[index].title.de : null
     }
   }
 }

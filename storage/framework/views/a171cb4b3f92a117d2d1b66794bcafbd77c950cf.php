@@ -9,10 +9,7 @@
     <h2><?php echo e(__('page.heading-how-can-we-help')); ?></h2>
     <div class="cta__buttons">
       
-      <a href="javascript:;" class="btn-cta js-btn-livechat">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M31.5 17.25a12.57 12.57 0 0 1-1.35 5.7A12.751 12.751 0 0 1 18.75 30a12.57 12.57 0 0 1-5.7-1.35L4.5 31.5l2.85-8.55A12.57 12.57 0 0 1 6 17.25a12.75 12.75 0 0 1 7.05-11.4 12.57 12.57 0 0 1 5.7-1.35h.75a12.72 12.72 0 0 1 12 12v.75z" stroke="#009b68" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <div><?php echo __('page.request-livechat-text'); ?></div>
-      </a>
+      
  
       <?php if(request()->routeIs('*.page.product.show')): ?>
         <a href="<?php echo e(localized_route('page.forms.training', ['slug' => AppHelper::slug($product->title), 'product' => $product->id ])); ?>" class="btn-cta" title="<?php echo e(__('page.request-training')); ?>">
@@ -51,15 +48,6 @@
   </div>
 </footer>
 <script src="<?php echo e(mix('assets/js/app.js')); ?>" type="text/javascript"></script>
-<script>
-  window.intercomSettings = {
-    app_id: "bqaelhed",
-    custom_launcher_selector: ".js-btn-livechat"
-  };
-</script>
-<script>
-(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/bqaelhed';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
-</script>
 <script type="text/javascript">
   var _paq = window._paq = window._paq || [];
   /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
