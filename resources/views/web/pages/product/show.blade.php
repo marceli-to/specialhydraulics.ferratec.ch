@@ -91,9 +91,9 @@
           @include('web.partials.accessories', ['accessories' => $accessories, 'product' => $product])
         @endif
 
-        {{-- @if ($consumables)
+        @if ($consumables)
           @include('web.partials.consumables', ['consumables' => $consumables, 'product' => $product])
-        @endif --}}
+        @endif
 
         @if ($product->code_youtube)
           <hr>
